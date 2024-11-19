@@ -84,7 +84,7 @@ Contributors
 - Trisha Maheshwari (tmahesh@umd.edu)
 - Whitney Kasenetz (kasenetz@umd.edu)
 
-
+This pipeline is released under the GNU General Public License version 3.
 
 .. toctree::
    :maxdepth: 2
