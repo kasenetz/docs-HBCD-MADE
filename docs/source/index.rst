@@ -17,7 +17,7 @@ HBCD-MADE- an automated developmental EEG preprocessing pipeline
   :alt: Publication DOI
 
 .. image:: https://img.shields.io/badge/License-GNU--Public--License-green
-  :target: https://github.com/ChildDevLab/HBCD-MADE?tab=GPL-3.0-1-ov-file#readme
+  :target: https://github.com/DCAN-Labs/HBCD-MADE?tab=GPL-3.0-1-ov-file
   :alt: License
 
 This page serves as documentation for the HBCD-MADE pipeline, an adapted version of the Maryland Analysis of Developmental EEG (MADE) pipeline (Debnath et al., 2020) designed for use with data from the Healthy Brain and Child Development (HBCD) study. The GitHub repository for the MADE pipeline upon which HBCD-MADE is based can be found `here <https://github.com/DCAN-Labs/HBCD-MADE>`_, and a publication describing the original pipeline can be found `here <https://onlinelibrary.wiley.com/doi/full/10.1111/psyp.13580>`_. The documentation for the HBCD-MADE pipeline can be found `here <https://docs-hbcd-made.readthedocs.io/en/latest/index.html>`_. 
