@@ -71,7 +71,7 @@ Unique Task Settings
 HBCD EEG Processing Settings
 ------------------------------
 
-The following parameters were used to process HBCD EEG data for the initial data release. For an exact report of parameters used to process any given file, refer to the ``MADE_specification.csv`` file in the HBCD-MADE output. 
+The following parameters were used to process HBCD EEG data for the initial data release. For an exact report of parameters used to process any given file, refer to the ``MADEspecification`` file in the HBCD-MADE output folder called 'processed_data'. 
 
 **HBCD Global Parameters** 
 
