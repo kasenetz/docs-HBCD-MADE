@@ -59,6 +59,7 @@ Unique Task Settings
 - **erp_filter**: Boolean variable indicating whether to apply a second low-pass filter before creating ERPs.
 - **erp_lowpass**: Hz at which to apply the second low-pass filter.
 - **marker_names**: (list of strings) Name of event code markers you want to construct epochs around (e.g., ``DIN3``). If ``make_dummy_events`` = true, then this should instead represent the first marker in your EEG file. Dummy events will then be placed after the first instance of this marker.
+- **score_ages**: Predefined age bins (in months) that are used to select time windows for ERP derivatives 
 - **score_times**: Time ranges (in seconds) to use for plotting and scoring SME, ERP, and peak measures.
 - **score_ROIs**: Regions of interest to use for plotting and scoring SME, ERP, and peak measures.
 
