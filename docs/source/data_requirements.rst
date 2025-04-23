@@ -217,3 +217,5 @@ The following files are required inputs to the HBCD-MADE pipeline:
 (2)	Metadata in .set files: ``./sub-<label>_ses-<label>_task-<label>_acq-eeg_eeg.set``
 (3)	EEG data matrix in .fdt: ``./sub-<label>_ses-<label>_task-<label>_acq-eeg_eeg.fdt``
 (4)	Processing settings .json: ``proc_settings_HBCD.json``
+(5)	Site delay file .csv: ``site_flag_delays_v<Date>.csv``
+
