@@ -147,14 +147,13 @@ Output files ending in ``trialMeasures.csv`` are created for MMN, VEP, and FACE 
      - inverted, object, uprightInv, uprightObj
    * - TrialNum
      - trial
-   * - MeanAmplitude_200-300_p8
-     - Mean amplitude between 200-300 ms at P8 cluster.
-   * - MeanAmplitude_75-125_oz
-     - Mean amplitude between 75-125 ms at Oz cluster.
-   * - MeanAmplitude_200-300_oz
-     - Mean amplitude between 200-300 ms at Oz cluster.
-   * - MeanAmplitude_325-625_oz
-     - Mean amplitude between 325-625 OZ. 
+   * - MeanAmplitude_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Mean amplitude during time window at specified ROI 
+   * - Peak_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Adaptive mean amplitude during time window at specified ROI 
+   * - Latency_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Latency during time window at specified ROI 
+
 
 .. list-table:: MMN Trial Measures Output
    :widths: 31 50
@@ -166,12 +165,12 @@ Output files ending in ``trialMeasures.csv`` are created for MMN, VEP, and FACE 
      - standard, deviant, predeviant
    * - TrialNum
      - trial
-   * - MeanAmplitude_200-400_t7t8
-     - Mean amplitude between 200-400 ms at T7/T8 cluster.
-   * - MeanAmplitude_200-400_f7f8
-     - Mean amplitude between 200-400 ms at F7/F8 cluster.
-   * - MeanAmplitude_200-400_fcz
-     - Mean amplitude between 200-400 ms at FCz cluster.
+   * - MeanAmplitude_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Mean amplitude during time window at specified ROI 
+   * - Peak_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Adaptive mean amplitude during time window at specified ROI 
+   * - Latency_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Latency during time window at specified ROI 
 
 
 **II. Summary Statistics**
@@ -192,14 +191,9 @@ Output files ending in ``summaryStats.csv`` are created for each task and contai
      - inverted, object, uprightInv, uprightObj
    * - NTrials
      - number of trials retained per condition
-   * - SME_200-300_p8
-     - SME during 200-300 ms at P8 cluster
-   * - SME_75-125_oz
-     - SME during 75-125 ms at Oz cluster
-   * - SME_200-300_oz
-     - SME during 200-300 ms at Oz cluster
-   * - SME_325-625_oz
-     - SME during 325-625 ms at Oz cluster
+   * - SME_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Standard measurement error during time window at specified ROI
+
 
 .. list-table:: VEP Summary Statistics Output
    :widths: 31 50
@@ -211,12 +205,8 @@ Output files ending in ``summaryStats.csv`` are created for each task and contai
      - VEP
    * - NTrials
      - number of trials retained
-   * - SME_40-79_oz
-     - SME during 40-79 ms at Oz cluster
-   * - SME_80-140_oz
-     - SME during 80-140 ms at Oz cluster
-   * - SME_141-300_oz
-     - SME during 141-300 ms at Oz cluster
+   * - SME_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Standard measurement error during time window at specified ROI
 
 .. list-table:: MMN Summary Statistics Output
    :widths: 31 50
@@ -228,12 +218,8 @@ Output files ending in ``summaryStats.csv`` are created for each task and contai
      - deviant, predeviant, standard
    * - NTrials
      - number of trials retained per condition
-   * - SME_200-400_t7t8
-     - SME during 200-400 ms at T7/T8 cluster
-   * - SME_200-400_f7f8
-     - SME during 200-400 ms at F7/F8 cluster
-   * - SME_200-400_fcz
-     - SME during 200-400 ms at FCz cluster
+   * - SME_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Standard measurement error during time window at specified ROI
 
 .. list-table:: RS Summary Statistics Output
    :widths: 31 50
