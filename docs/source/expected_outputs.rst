@@ -31,7 +31,7 @@ HBCD-MADE output contains the following file types:
 
 .. _./filtered_data:
 
-1. ``/filtered_data`` folder
+1. ``/filtered_data`` 
 -------------------------
 
 **Description**
@@ -51,7 +51,7 @@ Each EEG task administered will have a corresponding ``.set`` and ``.fdt`` file 
 
 .. _./merged_data: 
 
-2. ``/merged_data`` folder
+2. ``/merged_data`` 
 -----------------------
 
 **Description**
@@ -64,7 +64,7 @@ Tasks present in the merged ``.fdt`` file are listed in the corresponding ``.jso
 
 .. _./ica_data:
 
-3. ``/ica_data`` folder
+3. ``/ica_data`` 
 -------------------------
 
 **Description**
@@ -90,7 +90,7 @@ The ./ica_data folder contains the following:
 
 .. _./processed_data:
 
-4. ``/processed_data`` folder 
+4. ``/processed_data`` 
 -------------------------
 
 **Description** 
