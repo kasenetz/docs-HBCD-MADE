@@ -114,12 +114,12 @@ Each EEG file found in this folder will have a corresponding ``.json`` file in t
 
 This folder contains all processed data and MADE output, described in detail below:
 
-a. EEG Data (``.fdt``, ``.set``)
+a. EEG Data ``.fdt`` ``.set``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There is one .fdt and one corresponding .set file for each task containing fully processed data.
 
-b. CSV data files (``.csv``)
+b. CSV data files ``.csv``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For each task, two .csv files are automatically produced by MADE: a trial measures file and a summary statistics file.
@@ -232,12 +232,12 @@ Output files ending in ``summaryStats.csv`` are created for each task and contai
    * - SME
      - SME in each frequency bin
    * - Mean_Power
-     - Mean power in each frequency bin
+     - Mean power in each frequency bin in µV²/Hz
    * - ID
      - subject ID
 
 
-c. MATLAB Data files (``.mat``) 
+c. MATLAB Data files ``.mat``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``.mat`` files contain processing output.
@@ -246,7 +246,7 @@ c. MATLAB Data files (``.mat``)
 
 - Output for the RS data contains the ``spectra_eo_db`` matrix, which is structured as Electrodes x Frequency. RS ``.mat`` output does not contain the time dimension.
 
-d. Figures (``.jpg``)
+d. Figures ``.jpg``
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: The following plots are based on data from an adult volunteer and were processed using the HBCD-MADE pipeline, which is optimized for infant data. They do not represent typical infant results.
