@@ -31,7 +31,7 @@ HBCD-MADE output contains the following file types:
 
 .. _./filtered_data:
 
-1. ``/filtered_data`` folder
+1. ``/filtered_data`` 
 -------------------------
 
 **Description**
@@ -51,7 +51,7 @@ Each EEG task administered will have a corresponding ``.set`` and ``.fdt`` file 
 
 .. _./merged_data: 
 
-2. ``/merged_data`` folder
+2. ``/merged_data`` 
 -----------------------
 
 **Description**
@@ -64,7 +64,7 @@ Tasks present in the merged ``.fdt`` file are listed in the corresponding ``.jso
 
 .. _./ica_data:
 
-3. ``/ica_data`` folder
+3. ``/ica_data`` 
 -------------------------
 
 **Description**
@@ -90,7 +90,7 @@ The ./ica_data folder contains the following:
 
 .. _./processed_data:
 
-4. ``/processed_data`` folder 
+4. ``/processed_data`` 
 -------------------------
 
 **Description** 
@@ -114,15 +114,17 @@ Each EEG file found in this folder will have a corresponding ``.json`` file in t
 
 This folder contains all processed data and MADE output, described in detail below:
 
-a. EEG Data (``.fdt``, ``.set``)
+a. EEG Data ``.fdt`` ``.set``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There is one .fdt and one corresponding .set file for each task containing fully processed data.
 
-b. CSV data files (``.csv``)
+b. CSV data files ``.csv``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For each task, two .csv files are automatically produced by MADE: a trial measures file and a summary statistics file.
+
+Click :download:`here <csv_data_dictionary.csv>` to download a data dictionary defining the fields in each .csv output file. 
 
 **I. Trial Measures**
 
@@ -145,31 +147,13 @@ Output files ending in ``trialMeasures.csv`` are created for MMN, VEP, and FACE 
      - inverted, object, uprightInv, uprightObj
    * - TrialNum
      - trial
-   * - MeanAmplitude_200-300_p8
-     - Mean amplitude between 200-300 ms at P8 cluster.
-   * - MeanAmplitude_75-125_oz
-     - Mean amplitude between 75-125 ms at Oz cluster.
-   * - MeanAmplitude_200-300_oz
-     - Mean amplitude between 200-300 ms at Oz cluster.
-   * - MeanAmplitude_325-625_oz
-     - Mean amplitude between 325-625 OZ. 
+   * - MeanAmplitude_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Mean amplitude during time window at specified ROI 
+   * - Peak_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Adaptive mean amplitude during time window at specified ROI 
+   * - Latency_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Latency during time window at specified ROI 
 
-.. list-table:: VEP Trial Measures Output
-   :widths: 31 50
-   :header-rows: 1
-
-   * - Variable Name
-     - Description
-   * - Condition
-     - VEP
-   * - TrialNum
-     - trial
-   * - MeanAmplitude_40-79_oz
-     - Mean amplitude between 40-79 ms at Oz cluster.
-   * - MeanAmplitude_80-140_oz
-     - Mean amplitude between 80-140 ms at Oz cluster.
-   * - MeanAmplitude_141-300_oz
-     - Mean amplitude between 141-300 ms at Oz cluster.
 
 .. list-table:: MMN Trial Measures Output
    :widths: 31 50
@@ -181,12 +165,12 @@ Output files ending in ``trialMeasures.csv`` are created for MMN, VEP, and FACE 
      - standard, deviant, predeviant
    * - TrialNum
      - trial
-   * - MeanAmplitude_200-400_t7t8
-     - Mean amplitude between 200-400 ms at T7/T8 cluster.
-   * - MeanAmplitude_200-400_f7f8
-     - Mean amplitude between 200-400 ms at F7/F8 cluster.
-   * - MeanAmplitude_200-400_fcz
-     - Mean amplitude between 200-400 ms at FCz cluster.
+   * - MeanAmplitude_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Mean amplitude during time window at specified ROI 
+   * - Peak_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Adaptive mean amplitude during time window at specified ROI 
+   * - Latency_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Latency during time window at specified ROI 
 
 
 **II. Summary Statistics**
@@ -207,14 +191,9 @@ Output files ending in ``summaryStats.csv`` are created for each task and contai
      - inverted, object, uprightInv, uprightObj
    * - NTrials
      - number of trials retained per condition
-   * - SME_200-300_p8
-     - SME during 200-300 ms at P8 cluster
-   * - SME_75-125_oz
-     - SME during 75-125 ms at Oz cluster
-   * - SME_200-300_oz
-     - SME during 200-300 ms at Oz cluster
-   * - SME_325-625_oz
-     - SME during 325-625 ms at Oz cluster
+   * - SME_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Standard measurement error during time window at specified ROI
+
 
 .. list-table:: VEP Summary Statistics Output
    :widths: 31 50
@@ -226,12 +205,8 @@ Output files ending in ``summaryStats.csv`` are created for each task and contai
      - VEP
    * - NTrials
      - number of trials retained
-   * - SME_40-79_oz
-     - SME during 40-79 ms at Oz cluster
-   * - SME_80-140_oz
-     - SME during 80-140 ms at Oz cluster
-   * - SME_141-300_oz
-     - SME during 141-300 ms at Oz cluster
+   * - SME_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Standard measurement error during time window at specified ROI
 
 .. list-table:: MMN Summary Statistics Output
    :widths: 31 50
@@ -243,12 +218,8 @@ Output files ending in ``summaryStats.csv`` are created for each task and contai
      - deviant, predeviant, standard
    * - NTrials
      - number of trials retained per condition
-   * - SME_200-400_t7t8
-     - SME during 200-400 ms at T7/T8 cluster
-   * - SME_200-400_f7f8
-     - SME during 200-400 ms at F7/F8 cluster
-   * - SME_200-400_fcz
-     - SME during 200-400 ms at FCz cluster
+   * - SME_<TimeWindowStart>-<TimeWindowEnd>_<ROI>
+     - Standard measurement error during time window at specified ROI
 
 .. list-table:: RS Summary Statistics Output
    :widths: 31 50
@@ -261,12 +232,12 @@ Output files ending in ``summaryStats.csv`` are created for each task and contai
    * - SME
      - SME in each frequency bin
    * - Mean_Power
-     - Mean power in each frequency bin
+     - Mean power in each frequency bin in µV²/Hz
    * - ID
      - subject ID
 
 
-c. MATLAB Data files (``.mat``) 
+c. MATLAB Data files ``.mat``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``.mat`` files contain processing output.
@@ -275,7 +246,7 @@ c. MATLAB Data files (``.mat``)
 
 - Output for the RS data contains the ``spectra_eo_db`` matrix, which is structured as Electrodes x Frequency. RS ``.mat`` output does not contain the time dimension.
 
-d. Figures (``.jpg``)
+d. Figures ``.jpg``
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: The following plots are based on data from an adult volunteer and were processed using the HBCD-MADE pipeline, which is optimized for infant data. They do not represent typical infant results.

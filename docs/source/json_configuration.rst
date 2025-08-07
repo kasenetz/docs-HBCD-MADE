@@ -59,6 +59,7 @@ Unique Task Settings
 - **erp_filter**: Boolean variable indicating whether to apply a second low-pass filter before creating ERPs.
 - **erp_lowpass**: Hz at which to apply the second low-pass filter.
 - **marker_names**: (list of strings) Name of event code markers you want to construct epochs around (e.g., ``DIN3``). If ``make_dummy_events`` = true, then this should instead represent the first marker in your EEG file. Dummy events will then be placed after the first instance of this marker.
+- **score_ages**: Predefined age bins (in months) that are used to select time windows for ERP derivatives 
 - **score_times**: Time ranges (in seconds) to use for plotting and scoring SME, ERP, and peak measures.
 - **score_ROIs**: Regions of interest to use for plotting and scoring SME, ERP, and peak measures.
 
@@ -70,7 +71,7 @@ Unique Task Settings
 HBCD EEG Processing Settings
 ------------------------------
 
-The following parameters were used to process HBCD EEG data for the initial data release. For an exact report of parameters used to process any given file, refer to the ``MADE_specification.csv`` file in the HBCD-MADE output. 
+The following parameters were used to process HBCD EEG data for the initial data release. For an exact report of parameters used to process any given file, refer to the ``MADEspecification`` file in the HBCD-MADE output folder called 'processed_data'. 
 
 **HBCD Global Parameters** 
 
@@ -110,8 +111,6 @@ The following parameters were used to process HBCD EEG data for the initial data
 - ``num_dummy_events``: 360
 - ``dummy_event_spacing``: 0.5
 - ``marker_names``: "DIN3"
-- ``score_times``: [40, 79], [80,140], [141, 300]
-- ``score_ROIs``: ["oz", "oz", "oz"]
 
 2. **VEP**
 ^^^^^^^^^^^^
@@ -124,7 +123,9 @@ The following parameters were used to process HBCD EEG data for the initial data
 - ``ERP_window_start``: 0.07
 - ``ERP_window_end``: 0.15
 - ``marker_names``: "DIN3"
-- ``score_times``: [40, 79], [80,140], [141, 300]
+- ``score_ages``: [3, 6], [6, 9]
+- ``score_times1``: [40, 79], [80,140], [141, 300]
+- ``score_times2``:[40, 79], [80,120], [121, 170]
 - ``score_ROIs``: ["oz", "oz", "oz"]
 
 3. **MMN**
@@ -138,6 +139,7 @@ The following parameters were used to process HBCD EEG data for the initial data
 - ``erp_filter``: 1
 - ``erp_lowpass``: 30
 - ``marker_names``: "DIN2"
+- ``score_ages``: []
 - ``score_times``: [200, 400], [200, 400], [200, 400]
 - ``score_ROIs``: ["t7t8", "f7f8", "fcz"]
 
@@ -153,7 +155,9 @@ The following parameters were used to process HBCD EEG data for the initial data
 - ``erp_filter``: 1
 - ``erp_lowpass``: 30
 - ``marker_names``: "DIN3"
-- ``score_times``: [200, 300], [75,125], [200, 300], [325, 625]
+- ``score_ages``: [3, 6], [6, 9]
+- ``score_times1``: [200, 300], [75, 125], [200, 300], [325, 625]
+- ``score_times2``: [250, 350], [100, 200], [250, 350], [350, 650]
 - ``score_ROIs``: ["p8", "oz", "oz", "oz"]
 
 
